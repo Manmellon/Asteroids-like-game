@@ -1,0 +1,4 @@
+class DynamicGameObject : public GameObject
+{
+
+}
