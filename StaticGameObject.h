@@ -1,0 +1,4 @@
+class StaticGameObject : public GameObject
+{
+
+}
