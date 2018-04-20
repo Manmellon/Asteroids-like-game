@@ -1,0 +1,4 @@
+class Laser : public DynamicGameObject
+{
+
+}
