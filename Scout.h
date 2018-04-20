@@ -1,0 +1,4 @@
+class Scout : public DynamicGameObject
+{
+
+}
