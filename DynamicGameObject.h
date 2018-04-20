@@ -1,4 +1,4 @@
-class DynamicGameObject : public GameObject
+class DynamicGameObject : public StaticGameObject
 {
 
 }
