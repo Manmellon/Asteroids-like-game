@@ -1,0 +1,4 @@
+class GameWorld : public GameObject
+{
+
+}
