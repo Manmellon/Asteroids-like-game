@@ -1,0 +1,4 @@
+class Spaceship : public DynamicGameObject
+{
+
+}
