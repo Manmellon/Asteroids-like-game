@@ -1,3 +1,5 @@
+#include "Client.h"
+
 Client::Client()
 {
 	gameState = MENU;
