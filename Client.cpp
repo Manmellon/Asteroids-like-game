@@ -1,5 +1,6 @@
 Client::Client()
 {
+	gameState = MENU;
 }
 
 Client::~Client()
