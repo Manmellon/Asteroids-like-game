@@ -1,3 +1,5 @@
+#include <SDL2/SDL.h>
+
 class Client
 {
 	protected:
@@ -10,4 +12,4 @@ class Client
 		Client();
 		int MainLoop();
 		~Client();
-}
+};
