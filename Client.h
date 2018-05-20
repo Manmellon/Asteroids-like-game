@@ -1,5 +1,5 @@
 class Client
 {
 	protected:
-		enum {}gameState;
+		enum {MENU,GAME,PAUSE,OPTIONS,HELP,EXIT}gameState;
 }
