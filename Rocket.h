@@ -1,0 +1,4 @@
+class Rocket : public DynamicGameObject
+{
+
+}
