@@ -26,15 +26,25 @@ Client::~Client()
 int Client::MainLoop()
 {
 	int quit=0;
+	Uint32 ms;
+	int FPS = 60;
+	Uint32 MSPF = 1000/FPS;
 	
 	while (!quit)
 	{
+		ms=SDL_GetTicks();
+		
 		SDL_PollEvent(&event);
 		switch (event.type)
 		{
 			case SDL_QUIT: quit=1; break;
 		}
 		SDL_RenderPresent(renderer);
+		
+		ms = SDL_GetTicks()-ms;
+
+		if (ms < MSPF)
+			SDL_Delay(MSPF-ms);
 	}
 	return 0;
 }
