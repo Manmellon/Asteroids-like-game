@@ -30,7 +30,12 @@ int Client::MainLoop()
 	
 	while (!quit)
 	{
-		
+		SDL_PollEvent(&event);
+		switch (event.type)
+		{
+			case SDL_QUIT: quit=1; break;
+		}
+		SDL_RenderPresent(renderer);
 	}
 	return 0;
 }
