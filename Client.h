@@ -8,6 +8,7 @@ class Client
 		SDL_Renderer *renderer;
 		SDL_Event event;
 		SDL_DisplayMode displayMode;
+		void CheckInterface();
 	public:
 		Client();
 		int MainLoop();

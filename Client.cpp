@@ -39,6 +39,9 @@ int Client::MainLoop()
 		{
 			case SDL_QUIT: quit=1; break;
 		}
+		
+		CheckInterface();
+		
 		SDL_RenderPresent(renderer);
 		
 		ms = SDL_GetTicks()-ms;
@@ -47,4 +50,9 @@ int Client::MainLoop()
 			SDL_Delay(MSPF-ms);
 	}
 	return 0;
+}
+
+void Client::CheckInterface()
+{
+	
 }
