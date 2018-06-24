@@ -16,6 +16,10 @@ Client::Client()
 	
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	
+	defaultCursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_ARROW);
+	activeCursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_HAND);
+	
+	
 	gameState = MENU;
 }
 
@@ -54,5 +58,14 @@ int Client::MainLoop()
 
 void Client::CheckInterface()
 {
-	
+	SDL_SetCursor(defaultCursor);
+	mouseState = SDL_GetMouseState(&mouseX,&mouseY);
+	for (int i=0;i<interfacesList[gameState].size();i++)
+	{
+		if (interfacesList[gameState][i]->isFocus(mouseX,mouseY))
+		{
+			SDL_SetCursor(activeCursor);
+		}
+		
+	}
 }
